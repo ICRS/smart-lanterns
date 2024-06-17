@@ -26,7 +26,7 @@ This is a free event with the goal of sending everyone home with a smart lantern
 
 The first step is to download the code for this project which you can do from here:
 
-[https://github.com/etinaude/smart-lanterns](https://github.com/etinaude/smart-lanterns)
+[https://github.com/ICRS/smart-lanterns](https://github.com/ICRS/smart-lanterns)
 
 click the green code button then select `Download ZIP`
 
