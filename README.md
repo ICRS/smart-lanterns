@@ -1,14 +1,14 @@
+<img width="100px" src="./images/promo/logoNew.png">
+
 # Smart Lanterns
 
-## Presented by GSDC and Maker Club UoA
+## Presented by ICRS
 
 ## `Introduction`
 
 TIME: ~ 2.5hr
 
-WRITTEN BY: [Etienne Naude](https://etinaude.dev)
-
-LINK: [https://github.com/etinaude/smart-lanterns](https://github.com/etinaude/smart-lanterns)
+LINK: [https://github.com/ICRS/smart-lanterns](https://github.com/ICRS/smart-lanterns)
 
 <img width="500px" src="./images/promo/primary.webp">
 
@@ -180,15 +180,7 @@ What else????
 
 There are many other pattern options make with this, each LED can take a few different colours (about 16 million) but most would look too similar to each other to see, I would recommend using bright colours that are highly saturated.
 
-<!-- TODO ADD IMAGES out of time-->
 
-## Socials
 
-For more workshops like this please checkout either my github profile [etinaude](https://github.com/etinaude) or the following clubs which made this event possible:
 
-| Link      | <img width="100px" src="./images/promo/gdsc%20logo.webp">      | <img width="100px" src="./images/promo/maker%20club%20logo.webp"> |
-| --------- | -------------------------------------------------------------- | ----------------------------------------------------------------- |
-| Discord   | [W6QtB3Sm2U](https://discord.gg/W6QtB3Sm2U)                    | [penxcqxhyh](https://discord.gg/penxcqxhyh)                       |
-| Instagram | [@gdsc.uoa](https://www.instagram.com/gdsc.uoa/)               | [@make.uoa](https://www.instagram.com/make.uoa/)                  |
-| Website   | [GSDC](https://gdsc.community.dev/the-university-of-auckland/) | [makeuoa.nz](https://makeuoa.nz/)                                 |
-| Website   | <img width="200px" src="./images/promo/gdsc.webp">             | <img width="200px" src="./images/promo/makerclub.webp">           |
+
