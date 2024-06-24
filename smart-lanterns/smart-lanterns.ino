@@ -13,7 +13,7 @@
        #define NDEBUG
 #endif
 
-#include <ESP8266WiFi.h>
+#include "WiFi.h"
 #include "SinricPro.h"
 #include "SinricProLight.h"
 #include "conf.h"

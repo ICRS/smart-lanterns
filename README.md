@@ -36,20 +36,26 @@ you should find these instructions in the README.md file.
 
 ## `Step 2: Get Software`
 
-This project use arduino which requires the arduino IDE to run, I recommend using [Arduino IDE 2.0 RC](https://www.arduino.cc/en/software#future-version-of-the-arduino-ide), but platform IO or Arduino version 1 are also supported.
+This project uses an Arduino which requires the Arduino IDE to run. **This has been pre-installed** on the ICRS computers so go ahead and boot it up. The icon looks like this:
+
+<img width="70px" src="./images/arduino.png">
+
+If you are following along at home I recommend using [Arduino IDE 2.0 RC](https://www.arduino.cc/en/software#future-version-of-the-arduino-ide), but PlatformIO or Arduino version 1 are also supported.
 
 ## `Step 2.1: Board Manager`
 
+To get the files we need for this specific Arduino, we need to download them in the board manager.
+
 Update the board manager:
-click `file > preferences > Additional board manager URLs` and paste this link into it `https://arduino.esp8266.com/stable/package_esp8266com_index.json`
+click `file > preferences > Additional board manager URLs` and paste this link into it `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json`
 
 then click `OK`.
 
-<img width="500px" src="./images/boardUrl.webp">
+<img width="700px" src="./images/boardUrl.png">
 
 Once this is done install the new board manager by clicking the board icon searching `esp8266` and clicking `Install`.
 
-<img width="500px" src="./images/board%20manager.webp">
+<img width="300px" src="./images/board%20manager.png">
 
 ## `Step 2.2: Libraries`
 
@@ -66,19 +72,15 @@ Open the code in Arduino, all the files are located in the folder named `smart-l
 
 During the in person workshop we will provide you with a few components, these are:
 
-- 1 - [Wemos D1 mini ESP8266 dev board](https://www.aliexpress.com/item/1005001621784437.html?spm=a2g0o.order_list.0.0.21ef1802m8rokq) (which will be referred to as an "ESP")
+- 1 - [Wemos ESP32-S2 Mini](https://www.wemos.cc/en/latest/s2/s2_mini.html) (which will be referred to as an "ESP")
 - 0.5m - [60led/m 5050 addressable LEDs](https://www.aliexpress.com/item/1005001345392567.html?spm=a2g0o.order_list.0.0.21ef1802m8rokq)
 - 3 - Jumper wires soldered to the LEDs (soldering not covered in the workshop)
-- Hot glue
+- Double sided tape
 - Masking tape
 - [Lasercut corflute](./laser%20cutting.svg)
 - [Lasercut 120gsm White Card](./laser%20cutting.svg)
 - [Lasercut 120gsm Black Card](./laser%20cutting.svg)
-
-You will need to bring 2 things
-
-- A laptop with an internet connection and USB ports
-- A data micro USB cable
+- A USB-C cable
 
 ### `Step 3.1: Laser cutting (Pre-done)`
 
@@ -88,23 +90,23 @@ Laser cut the paper following the file in the [laser cutting.svg](./laser%20cutt
 
 ### `Step 3.2: Building the lantern`
 
-Place the LED strip about 2-3 mm from the bottom of the card and stick it down using the adhesive tape on the back of the LED strip, using hot glue to secure it if needed. This is shown in the image below:
+Place the LED strip about 2-3 mm from the bottom of the card and stick it down using the double sided tape on the back of the LED strip. This is shown in the image below:
 
 <img width="500px" src="./images/leds.webp">
 
-Next, hot glue the core flute to bottom edge of the card below the LED strip being **CAREFUL to not crease the card**
+Next, stick the core flute to bottom edge of the card below the LED strip being **CAREFUL to not crease the card**
 
-Lastly, hot glue the black card to the outside of the white card to hide the LED strip when the lights are on.
+Lastly, stick the black card to the outside of the white card to hide the LED strip when the lights are on.
 
 ### `Step 3.3: Wiring`
 
-Wire the LEDS to the D4 of the ESP. Making sure that you wire in the direction of the arrow. This step is shown in the image below.
+The wiring has been done for you as shown in the image below.
 
 - +5V -> VIN
 - GND -> GND
-- DIN -> D4
+- DIN -> 15
 
-<img width="500px" src="./images/digram.webp">
+<img width="600px" src="./images/diagram.png">
 
 ### `Step 3.4: Securing the ESP`
 

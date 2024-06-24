@@ -1,13 +1,13 @@
 #define BAUD_RATE         115200
 
 // LED SETTINGS
-#define LED_PIN   D4
+#define LED_PIN   15
 #define LED_COUNT 18
 
 
 // WIFI SETTINGS
-#define WIFI_SSID         "UoA-Unleash"
-#define WIFI_PASS         "UoA_Unl3ash"
+#define WIFI_SSID         "ICRS"
+#define WIFI_PASS         "xxxxxxx"
 
 // Sinric Pro
 #define LIGHT_ID          "xxxxxxxxxxxxxxxxxxxxxxxx"
@@ -16,7 +16,7 @@
 
 
 #define HUE 200
-#define PATTERN 1
+#define PATTERN 1 /* Change this number for different patterns (see below) */
 
 /*
   0 -> Trail
