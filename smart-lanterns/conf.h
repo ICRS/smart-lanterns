@@ -1,4 +1,4 @@
-#define BAUD_RATE         115200
+#define BAUD_RATE 115200
 
 // LED SETTINGS
 #define LED_PIN   15
@@ -6,13 +6,7 @@
 
 
 // WIFI SETTINGS
-#define WIFI_SSID         "ICRS"
-#define WIFI_PASS         "xxxxxxx"
-
-// Sinric Pro
-#define LIGHT_ID          "xxxxxxxxxxxxxxxxxxxxxxxx"
-#define APP_KEY           "d6d37047-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-#define APP_SECRET        "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx-xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+#define WIFI_SSID "my_light"
 
 
 #define HUE 200

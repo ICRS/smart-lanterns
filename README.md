@@ -16,7 +16,7 @@ LINK: [https://github.com/ICRS/smart-lanterns](https://github.com/ICRS/smart-lan
 
 This is a free event with the goal of sending everyone home with a smart lantern and a new set of skills. The event will be broken down into 5 parts:
 
-**Intro**: We introduce the clubs and demonstrate briefly how to make the lanterns and explain what we will be doing.\
+**Intro**: We introduce ICRS and demonstrate briefly how to make the lanterns and explain what we will be doing.\
 **Collab**: Breaking into teams of 3-5 working together to make one lantern.\
 **Individual**: Using the process learned in the previous step to make the rest the new lanterns for the team.\
 **Food**: Needed for survival by humans.\
@@ -32,7 +32,7 @@ click the green code button then select `Download ZIP`
 
 <img width="500px" src="./images/download.webp">
 
-you should find these instructions in the README.md file.
+You should find these instructions in the README.md file.
 
 ## `Step 2: Get Software`
 
@@ -53,20 +53,24 @@ then click `OK`.
 
 <img width="700px" src="./images/boardUrl.png">
 
-Once this is done install the new board manager by clicking the board icon searching `esp8266` and clicking `Install`.
+Once this is done install the new board by clicking the board icon searching `esp32`. Then select version 2.0.14 and click `Install`.
+
+> Note:
+> esp32 versions 3.0.0 and newer are unstable and at the time of writing aren't compatible with FastLED which we will be installing next.
 
 <img width="300px" src="./images/board%20manager.png">
 
 ## `Step 2.2: Libraries`
 
-Click on the library icon and search for `FastLED`, then click install. Do the same for `sinricPro`.
+Click on the library icon and search for `FastLED` and click install. Make sure to choose the latest version.
 
 <img width="250px" src="./images/fastLED.webp">
-<img width="250px" src="./images/sinric-lib.webp">
 
 ## `Step 2.3: Open Code`
 
 Open the code in Arduino, all the files are located in the folder named `smart-lanterns`. You can open this by clicking `file > open` in the top left corner.
+
+Feel free to have a look at the code and try to understand it!
 
 ## `Step 3: Hardware`
 
@@ -84,7 +88,10 @@ During the in person workshop we will provide you with a few components, these a
 
 ### `Step 3.1: Laser cutting (Pre-done)`
 
-Laser cut the paper following the file in the [laser cutting.svg](./laser%20cutting.svg) file, which should look roughly like this (outdated):
+> Note:
+> This step has been done for you already, so feel free to move onto step 3.2
+
+Laser cut the paper following the file in the [laser cutting.svg](./laser%20cutting.svg) file, which should look roughly like this:
 
 <img width="500px" src="./images/laser.webp">
 
@@ -104,7 +111,7 @@ The wiring has been done for you as shown in the image below.
 
 - +5V -> VIN
 - GND -> GND
-- DIN -> 15
+- DIN -> 16
 
 <img width="600px" src="./images/diagram.png">
 
@@ -114,52 +121,48 @@ Once this is done, place the ESP in the hole in the core flute, with the wire tr
 
 ## `Step 4: Configuration`
 
-### `Step 4.1: WIFI`
-
-We will use [Sinric Pro](https://sinric.pro/index.html) to connect this to the internet and to [Google Assistant](https://assistant.google.com/)
-
-Start by creating a [free Sinric Pro account](https://portal.sinric.pro/register). Although it is possible to sign up using a temporary email, it is not recommended as you might want to log in again later to add new devices or change your configurations.
-
-then create a new light by clicking on devices and **+ Add Device**.
-
-then fill in a name for your circle and select **Smart Light Bulb** for the Device Type.
-
-Then click next until you are on the screen which shows the details of your device. It should look like this:
-
-<img width="800px" src="./images/sinric.webp">
-
-### `Step 4.2: Configuration File`
+### `Step 4.1: Configuration File`
 
 Open the demo code in the Arduino IDE (Step 2.3)
 
-copy paste each field into the **config.h** and add your WIFI details (name and password)
+Rename WIFI_SSID from `"my_light"` to something unique. Make sure to keep the quotation marks!
 
-### `Step 4.3: Pattern`
+> Note:
+> WIFI_SSID cannot have spaces in it.
 
-In the config file select a pattern by uncommenting (removing the `//`) the pattern you would like. The pattern options are at the end of this document.
+### `Step 4.2: Pattern`
+
+In the config file select a pattern by setting `PATTERN` to the pattern you would like. The pattern options are at the bottom of the file.
+
+```C
+#define PATTERN 1 // Change this number
+```
 
 ## `Step 5: Upload Demo Code`
 
-Plug the ESP into your laptop and\
-Select `LOLIN(WEMOS) D1 mini clone` from the drop down menu.\
-Then click the upload button (right pointing arrow).\
-And wait for your code to compile and upload. As seen in the image below:
+1. Plug the ESP into your laptop.
+2. Select `LOLIN S2 Mini` in the top left. It might also say `select board`. Then click `Select other board and port...`
+3. Type in `LOLIN S2 Mini` on the left hand column and select it.
+4. In the right hand column, if there is anything there then click it and move on to 5. Otherwise you will need to restart the ESP in boot mode.\
+This can be done by holding down both of the buttons on the ESP, and releasing the button labeled `RST` first.\
+If a port still doesn't show up then ask a supervisor for help.
+5. Click `ok`.
+6. Click the upload button (the button in the top left of the screen with a right pointing arrow).
+7. Wait for your code to compile and upload.
 
-<img width="800px" src="./images/upload.webp">
+ADD VIDEO HERE!!!
 
-## `Step 6: Voice Assistant`
+## `Step 6: Connect Over WiFi`
 
-You can add a connection to Google Assistant via the sinric pro app. Download the app from the [Google Play Store](https://play.google.com/store/apps/details?id=pro.sinric&hl=en_NZ&gl=US) or the [Apple App Store](https://apps.apple.com/us/app/sinric-pro/id1513086098). From the app you log in and all your devices should display in a list. Then you can open the [Google Home](https://play.google.com/store/apps/details?id=com.google.android.apps.chromecast.app&hl=en_NZ&gl=US) app and click `+ > Set up device > Works with Google > Sinric Pro` in the top left corner. this allows you to link your Sinric Pro device to Google Home and control it with voice commands!
+Once the code has uploaded, you should see a WiFi network with the name you set in step 4.1.
+
+Connect to this network the same way you would any other WiFi network. You can do this either with your laptop or your phone!
+
+Next go to the URL [http://192.168.4.1/H](http://192.168.4.1/H) and you should see your light turn on. You can also turn it off from the same webpage.
 
 ## `Past the workshop:`
 
-There are plenty of other col things which can be done with the technology used in this project. Here are some examples:
-
-### `API Connections?`
-
-Many companies such as Facebook, Google, Canvas, Discord etc. Have APIs which allow you to link into their services. This means you can potentially have your lights react to certain events. For Example your lights can show green if you received a good grade on canvas and red if you received a bad grade.
-
-I have not used all of these APIs so I am not sure the exact access you have or how to set them up but this is an example of the kinds of things you can do. And this is outside the scope of this workshop
+There are plenty of other cool things which can be done with the technology used in this project. Here are some examples you can try when you have finished:
 
 ### `What else can you make?`
 
