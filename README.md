@@ -214,7 +214,7 @@ Have a look in the code for where the patterns are created and make your own!
 
 ### `Nicer webpage`
 
-See if you can find the text that appears on webpage somewhere in the code. Using a small bit of HTML it is possible to make much nicer looking buttons.
+See if you can find the text that appears on the webpage somewhere in the code. Using a small bit of HTML it is possible to make much nicer looking buttons.
 
 ### `What else can you make?`
 
