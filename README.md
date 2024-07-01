@@ -139,7 +139,6 @@ or this:
 
 <img width="400px" src="./images/assembled2.jpg">
 
-
 You are now done with the assembly!
 
 ## `Step 4: Configuration`
@@ -163,7 +162,6 @@ Rename `WIFI_SSID` from `"my_light"` to something memorable and unique. Make sur
 #define WIFI_SSID "my_light" // You can be more creative than this!
 ```
 
-
 ### `Step 4.2: Pattern`
 
 In the config file select a pattern by setting the number after `PATTERN` to the pattern you would like. The pattern options are at the bottom of the file.
@@ -178,8 +176,8 @@ In the config file select a pattern by setting the number after `PATTERN` to the
 2. Select `LOLIN S2 Mini` in the top left. It might also say `select board`. Then click `Select other board and port...`
 3. Type in `LOLIN S2 Mini` on the left hand column and select it.
 4. In the right hand column, if there is anything there then click it and move on to 5. Otherwise you will need to restart the ESP in boot mode.\
-This can be done by reaching into the lantern and holding down both of the buttons on the ESP, and releasing the button labeled `RST` first.\
-If a port still doesn't show up then ask a supervisor for help.
+   This can be done by reaching into the lantern and holding down both of the buttons on the ESP, and releasing the button labeled `RST` first.\
+   If a port still doesn't show up then ask a supervisor for help.
 5. Click `ok`.
 6. Click the upload button (the button in the top left of the screen with a right pointing arrow).
 7. Wait for your code to compile and upload.
@@ -232,9 +230,3 @@ Automate 3d printing\
 Smart Speaker
 
 What else????
-
-
-
-
-
-
