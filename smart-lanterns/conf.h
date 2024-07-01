@@ -1,7 +1,7 @@
 #define BAUD_RATE 115200
 
 // LED SETTINGS
-#define LED_PIN   15
+#define LED_PIN   16
 #define LED_COUNT 18
 
 
